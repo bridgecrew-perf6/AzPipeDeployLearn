@@ -1,0 +1,30 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'AzureSQLDBConn'
+    subscriptionId: '1536499a-91e7-4e7d-b193-c1cbad71d769'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'RmPipeline-CreateRG'
+    location: 'UK South'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/KarlLayland/AzPipeDeployLearn/main/azuredeploy.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/KarlLayland/AzPipeDeployLearn/main/azuredeploy.parameters.json'
+    deploymentMode: 'Incremental'
+    deploymentName: 'AzSQLDBDeploy'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
