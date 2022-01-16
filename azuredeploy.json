@@ -54,8 +54,7 @@
           "name": "[parameters('sqlDBName')]",
           "location": "[parameters('location')]",
           "sku": {
-            "name": "Gen5",
-            "tier": "GeneralPurpose"         
+               "tier": "GeneralPurpose"         
           },
           "dependsOn": [
             "[resourceId('Microsoft.Sql/servers', concat(parameters('serverName')))]"
