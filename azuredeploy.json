@@ -54,7 +54,7 @@
           "name": "[parameters('sqlDBName')]",
           "location": "[parameters('location')]",
           "sku": {
-               "name": "GENERALPURPOSE_GP_FSV2_10"
+              
           },
           "dependsOn": [
             "[resourceId('Microsoft.Sql/servers', concat(parameters('serverName')))]"
