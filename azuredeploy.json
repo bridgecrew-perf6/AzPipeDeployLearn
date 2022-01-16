@@ -54,7 +54,6 @@
           "name": "[parameters('sqlDBName')]",
           "location": "[parameters('location')]",
           "sku": {
-            "sku": {
                  "name": "GP_S_Gen5",
                  "tier": "GeneralPurpose",
                  "family": "Gen5",
