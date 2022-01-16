@@ -54,9 +54,7 @@
           "name": "[parameters('sqlDBName')]",
           "location": "[parameters('location')]",
           "sku": {
-            "name": "P2",
-            "tier": "Premium"
-          },
+            "name": "S0"          },
           "dependsOn": [
             "[resourceId('Microsoft.Sql/servers', concat(parameters('serverName')))]"
           ]
