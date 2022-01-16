@@ -55,7 +55,7 @@
           "location": "[parameters('location')]",
           "sku": {
             "name": "P2",
-            "tier": "General Purpose"
+            "tier": "Premium"
           },
           "dependsOn": [
             "[resourceId('Microsoft.Sql/servers', concat(parameters('serverName')))]"
