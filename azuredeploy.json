@@ -54,8 +54,7 @@
           "name": "[parameters('sqlDBName')]",
           "location": "[parameters('location')]",
           "sku": {
-               "name": "Standard",
-            "tier": "Standard"        
+               "name": "Standard_LRS"
           },
           "dependsOn": [
             "[resourceId('Microsoft.Sql/servers', concat(parameters('serverName')))]"
