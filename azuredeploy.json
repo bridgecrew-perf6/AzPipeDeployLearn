@@ -54,6 +54,7 @@
           "name": "[parameters('sqlDBName')]",
           "location": "[parameters('location')]",
           "sku": {
+             "tier": "GeneralPurpose",
                "name": "Standard_LRS"
           },
           "dependsOn": [
