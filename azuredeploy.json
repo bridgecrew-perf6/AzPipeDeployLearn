@@ -56,6 +56,7 @@
           "sku": {
               "name": "Standard",
             "tier": "Standard"
+            
           },
           "dependsOn": [
             "[resourceId('Microsoft.Sql/servers', concat(parameters('serverName')))]"
